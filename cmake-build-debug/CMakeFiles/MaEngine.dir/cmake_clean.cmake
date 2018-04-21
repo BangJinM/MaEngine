@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MaEngine.dir/main.cpp.obj"
+  "CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj"
+  "CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj"
+  "CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj"
   "MaEngine.pdb"
   "MaEngine.exe"
   "MaEngine.exe.manifest"

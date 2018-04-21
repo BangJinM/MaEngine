@@ -55,17 +55,6 @@ CMAKE_BINARY_DIR = E:\MaEngine\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	D:\software\Clion\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -76,6 +65,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	D:\software\Clion\bin\cmake\bin\cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -110,44 +110,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MaEngine
+# Target rules for targets named Common
 
 # Build rule for target.
-MaEngine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 MaEngine
-.PHONY : MaEngine
+Common: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Common
+.PHONY : Common
 
 # fast build rule for target.
-MaEngine/fast:
-	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/build
-.PHONY : MaEngine/fast
+Common/fast:
+	$(MAKE) -f Framework\Common\CMakeFiles\Common.dir\build.make Framework/Common/CMakeFiles/Common.dir/build
+.PHONY : Common/fast
 
-main.obj: main.cpp.obj
+#=============================================================================
+# Target rules for targets named Empty
 
-.PHONY : main.obj
+# Build rule for target.
+Empty: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Empty
+.PHONY : Empty
 
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+Empty/fast:
+	$(MAKE) -f Empty\CMakeFiles\Empty.dir\build.make Empty/CMakeFiles/Empty.dir/build
+.PHONY : Empty/fast
 
 # Help Target
 help:
@@ -155,12 +141,10 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... rebuild_cache
-	@echo ... MaEngine
 	@echo ... edit_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... rebuild_cache
+	@echo ... Common
+	@echo ... Empty
 .PHONY : help
 
 

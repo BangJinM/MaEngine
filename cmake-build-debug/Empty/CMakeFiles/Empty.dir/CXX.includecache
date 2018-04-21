@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/MaEngine/Empty/EmptyApolication.cpp
+../Framework/Common/BaseApplication.h
+E:/MaEngine/Framework/Common/BaseApplication.h
+
+E:/MaEngine/Framework/Common/BaseApplication.h
+../Interface/Interface.h
+E:/MaEngine/Framework/Interface/Interface.h
+../Interface/IApplication .h
+E:/MaEngine/Framework/Interface/IApplication .h
+
+E:/MaEngine/Framework/Interface/IApplication .h
+Interface.h
+E:/MaEngine/Framework/Interface/Interface.h
+IRuntimeModule.h
+E:/MaEngine/Framework/Interface/IRuntimeModule.h
+
+E:/MaEngine/Framework/Interface/IRuntimeModule.h
+Interface.h
+E:/MaEngine/Framework/Interface/Interface.h
+
+E:/MaEngine/Framework/Interface/Interface.h
+

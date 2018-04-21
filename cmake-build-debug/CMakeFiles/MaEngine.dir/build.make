@@ -56,43 +56,95 @@ include CMakeFiles/MaEngine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MaEngine.dir/flags.make
 
-CMakeFiles/MaEngine.dir/main.cpp.obj: CMakeFiles/MaEngine.dir/flags.make
-CMakeFiles/MaEngine.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MaEngine.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MaEngine.dir\main.cpp.obj -c E:\MaEngine\main.cpp
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj: CMakeFiles/MaEngine.dir/flags.make
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj: ../src/Framework/Common/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MaEngine.dir\src\Framework\Common\main.cpp.obj -c E:\MaEngine\src\Framework\Common\main.cpp
 
-CMakeFiles/MaEngine.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MaEngine.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MaEngine\main.cpp > CMakeFiles\MaEngine.dir\main.cpp.i
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MaEngine\src\Framework\Common\main.cpp > CMakeFiles\MaEngine.dir\src\Framework\Common\main.cpp.i
 
-CMakeFiles/MaEngine.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MaEngine.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MaEngine\main.cpp -o CMakeFiles\MaEngine.dir\main.cpp.s
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MaEngine\src\Framework\Common\main.cpp -o CMakeFiles\MaEngine.dir\src\Framework\Common\main.cpp.s
 
-CMakeFiles/MaEngine.dir/main.cpp.obj.requires:
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.requires:
 
-.PHONY : CMakeFiles/MaEngine.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.requires
 
-CMakeFiles/MaEngine.dir/main.cpp.obj.provides: CMakeFiles/MaEngine.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/MaEngine.dir/main.cpp.obj.provides
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.provides: CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.provides.build
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.provides
 
-CMakeFiles/MaEngine.dir/main.cpp.obj.provides.build: CMakeFiles/MaEngine.dir/main.cpp.obj
+CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.provides.build: CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj
+
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj: CMakeFiles/MaEngine.dir/flags.make
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj: ../src/Framework/Interface/BaseApplication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MaEngine.dir\src\Framework\Interface\BaseApplication.cpp.obj -c E:\MaEngine\src\Framework\Interface\BaseApplication.cpp
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MaEngine\src\Framework\Interface\BaseApplication.cpp > CMakeFiles\MaEngine.dir\src\Framework\Interface\BaseApplication.cpp.i
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MaEngine\src\Framework\Interface\BaseApplication.cpp -o CMakeFiles\MaEngine.dir\src\Framework\Interface\BaseApplication.cpp.s
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.requires:
+
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.requires
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.provides: CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.provides.build
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.provides
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.provides.build: CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj
+
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj: CMakeFiles/MaEngine.dir/flags.make
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj: ../src/Framework/Interface/EmptyApolication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MaEngine.dir\src\Framework\Interface\EmptyApolication.cpp.obj -c E:\MaEngine\src\Framework\Interface\EmptyApolication.cpp
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\MaEngine\src\Framework\Interface\EmptyApolication.cpp > CMakeFiles\MaEngine.dir\src\Framework\Interface\EmptyApolication.cpp.i
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\MaEngine\src\Framework\Interface\EmptyApolication.cpp -o CMakeFiles\MaEngine.dir\src\Framework\Interface\EmptyApolication.cpp.s
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.requires:
+
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.requires
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.provides: CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\MaEngine.dir\build.make CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.provides.build
+.PHONY : CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.provides
+
+CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.provides.build: CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj
 
 
 # Object files for target MaEngine
 MaEngine_OBJECTS = \
-"CMakeFiles/MaEngine.dir/main.cpp.obj"
+"CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj" \
+"CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj" \
+"CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj"
 
 # External object files for target MaEngine
 MaEngine_EXTERNAL_OBJECTS =
 
-MaEngine.exe: CMakeFiles/MaEngine.dir/main.cpp.obj
+MaEngine.exe: CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj
+MaEngine.exe: CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj
+MaEngine.exe: CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj
 MaEngine.exe: CMakeFiles/MaEngine.dir/build.make
 MaEngine.exe: CMakeFiles/MaEngine.dir/linklibs.rsp
 MaEngine.exe: CMakeFiles/MaEngine.dir/objects1.rsp
 MaEngine.exe: CMakeFiles/MaEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MaEngine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\MaEngine\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MaEngine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MaEngine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,7 +152,9 @@ CMakeFiles/MaEngine.dir/build: MaEngine.exe
 
 .PHONY : CMakeFiles/MaEngine.dir/build
 
-CMakeFiles/MaEngine.dir/requires: CMakeFiles/MaEngine.dir/main.cpp.obj.requires
+CMakeFiles/MaEngine.dir/requires: CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj.requires
+CMakeFiles/MaEngine.dir/requires: CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj.requires
+CMakeFiles/MaEngine.dir/requires: CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj.requires
 
 .PHONY : CMakeFiles/MaEngine.dir/requires
 

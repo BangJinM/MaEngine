@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/MaEngine/main.cpp" "E:/MaEngine/cmake-build-debug/CMakeFiles/MaEngine.dir/main.cpp.obj"
+  "E:/MaEngine/src/Framework/Common/main.cpp" "E:/MaEngine/cmake-build-debug/CMakeFiles/MaEngine.dir/src/Framework/Common/main.cpp.obj"
+  "E:/MaEngine/src/Framework/Interface/BaseApplication.cpp" "E:/MaEngine/cmake-build-debug/CMakeFiles/MaEngine.dir/src/Framework/Interface/BaseApplication.cpp.obj"
+  "E:/MaEngine/src/Framework/Interface/EmptyApolication.cpp" "E:/MaEngine/cmake-build-debug/CMakeFiles/MaEngine.dir/src/Framework/Interface/EmptyApolication.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

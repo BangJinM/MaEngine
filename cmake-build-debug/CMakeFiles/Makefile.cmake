@@ -30,6 +30,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/software/Clion/bin/cmake/share/cmake-3.9/Modules/Platform/WindowsPaths.cmake"
   "D:/software/Clion/bin/cmake/share/cmake-3.9/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
+  "../Empty/CMakeLists.txt"
+  "../Framework/CMakeLists.txt"
+  "../Framework/Common/CMakeLists.txt"
   "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.9.4/CMakeRCCompiler.cmake"
@@ -45,9 +48,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Framework/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Framework/Common/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Empty/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/MaEngine.dir/DependInfo.cmake"
+  "Framework/Common/CMakeFiles/Common.dir/DependInfo.cmake"
+  "Empty/CMakeFiles/Empty.dir/DependInfo.cmake"
   )
