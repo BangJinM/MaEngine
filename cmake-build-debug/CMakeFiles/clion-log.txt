@@ -1,4 +1,0 @@
-D:\software\Clion\bin\cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" E:\MaEngine
--- Configuring done
--- Generating done
--- Build files have been written to: E:/MaEngine/cmake-build-debug
