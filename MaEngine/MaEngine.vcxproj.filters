@@ -34,6 +34,15 @@
     <Filter Include="Framework\Interface">
       <UniqueIdentifier>{6c1be7db-b26c-4330-9c6b-11674ef20df1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Asset">
+      <UniqueIdentifier>{a796120d-22a6-41f8-b7e2-589afc776763}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{47a31ae8-8494-47cc-8fcc-6bb49bf9ebba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RHI">
+      <UniqueIdentifier>{29e6838c-8d2c-4fae-9278-ae408a16a7e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -81,6 +90,9 @@
     <ClInclude Include="Framework\Common\portable.h">
       <Filter>Framework\Common</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\Common\geommath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -124,5 +136,6 @@
     <None Include="Platform\Windows\he.exe">
       <Filter>Platform\Windows</Filter>
     </None>
+    <None Include="External\ispc.exe" />
   </ItemGroup>
 </Project>

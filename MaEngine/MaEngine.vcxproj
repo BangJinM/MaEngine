@@ -151,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="Framework\Common\Allocator.h" />
     <ClInclude Include="Framework\Common\BaseApplication.h" />
+    <ClInclude Include="Framework\Common\geommath.h" />
     <ClInclude Include="Framework\Common\GfxConfiguration.h" />
     <ClInclude Include="Framework\Common\GraphicsManager.h" />
     <ClInclude Include="Framework\Common\MemoryManager.h" />
@@ -185,6 +186,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="External\ispc.exe" />
     <None Include="Platform\Windows\he.exe" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
