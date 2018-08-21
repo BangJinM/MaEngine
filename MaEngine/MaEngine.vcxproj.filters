@@ -90,7 +90,46 @@
     <ClInclude Include="Framework\Common\portable.h">
       <Filter>Framework\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Common\geommath.h">
+    <ClInclude Include="Framework\GeoMath\geommath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\Absolute.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\AddByElement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\CrossProduct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\DCT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\DivByElement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\InverseMatrix4X4f.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\MatrixUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\MulByElement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\Normalize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\Pow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\Transform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\ispc\Transpose.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -137,5 +176,36 @@
       <Filter>Platform\Windows</Filter>
     </None>
     <None Include="External\ispc.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
+    <Object Include="Framework\GeoMath\ispc\Absolute.obj" />
+    <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\CrossProduct.obj" />
+    <Object Include="Framework\GeoMath\ispc\DCT.obj" />
+    <Object Include="Framework\GeoMath\ispc\DivByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\InverseMatrix4X4f.obj" />
+    <Object Include="Framework\GeoMath\ispc\MatrixUtil.obj" />
+    <Object Include="Framework\GeoMath\ispc\MulByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\Normalize.obj" />
+    <Object Include="Framework\GeoMath\ispc\Pow.obj" />
+    <Object Include="Framework\GeoMath\ispc\SubByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\Transform.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\DivByElement.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\InverseMatrix4X4f.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\MatrixUtil.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\MulByElement.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\Normalize.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\Pow.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc" />
+    <CustomBuild Include="Framework\Transpose.ispc" />
   </ItemGroup>
 </Project>

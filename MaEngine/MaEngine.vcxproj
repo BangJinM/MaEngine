@@ -73,6 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)\External;$(ProjectDir)\Platform;$(ProjectDir)\Framework;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ProjectDir)\External;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -151,11 +152,24 @@
   <ItemGroup>
     <ClInclude Include="Framework\Common\Allocator.h" />
     <ClInclude Include="Framework\Common\BaseApplication.h" />
-    <ClInclude Include="Framework\Common\geommath.h" />
+    <ClInclude Include="Framework\GeoMath\geommath.h" />
     <ClInclude Include="Framework\Common\GfxConfiguration.h" />
     <ClInclude Include="Framework\Common\GraphicsManager.h" />
     <ClInclude Include="Framework\Common\MemoryManager.h" />
     <ClInclude Include="Framework\Common\portable.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\Absolute.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\AddByElement.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\CrossProduct.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\DCT.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\DivByElement.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\InverseMatrix4X4f.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\MatrixUtil.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\MulByElement.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\Normalize.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\Pow.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\Transform.h" />
+    <ClInclude Include="Framework\GeoMath\ispc\Transpose.h" />
     <ClInclude Include="Framework\Interface\IApplication .h" />
     <ClInclude Include="Framework\Interface\IMemoryManager.h" />
     <ClInclude Include="Framework\Interface\Interface.h" />
@@ -186,8 +200,123 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="External\ispc.exe" />
+    <None Include="External\ispc.exe">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 "%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2 --opt=fast-math;%(Outputs)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj</Outputs>
+    </None>
+    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\DivByElement.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\InverseMatrix4X4f.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\MatrixUtil.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\MulByElement.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\Normalize.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\Pow.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+    </CustomBuild>
     <None Include="Platform\Windows\he.exe" />
+    <CustomBuild Include="Framework\Transpose.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 "%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Framework\GeoMath\ispc\Absolute.obj" />
+    <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\CrossProduct.obj" />
+    <Object Include="Framework\GeoMath\ispc\DCT.obj" />
+    <Object Include="Framework\GeoMath\ispc\DivByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\InverseMatrix4X4f.obj" />
+    <Object Include="Framework\GeoMath\ispc\MatrixUtil.obj" />
+    <Object Include="Framework\GeoMath\ispc\MulByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\Normalize.obj" />
+    <Object Include="Framework\GeoMath\ispc\Pow.obj" />
+    <Object Include="Framework\GeoMath\ispc\SubByElement.obj" />
+    <Object Include="Framework\GeoMath\ispc\Transform.obj" />
+    <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
