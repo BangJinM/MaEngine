@@ -176,10 +176,10 @@
       <Filter>Platform\Windows</Filter>
     </None>
     <None Include="External\ispc.exe" />
+    <None Include="Framework\GeoMath\ispc\.gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
-    <Object Include="Framework\GeoMath\ispc\Absolute.obj" />
     <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />
     <Object Include="Framework\GeoMath\ispc\CrossProduct.obj" />
     <Object Include="Framework\GeoMath\ispc\DCT.obj" />
@@ -205,5 +205,6 @@
     <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc" />
+    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc" />
   </ItemGroup>
 </Project>
