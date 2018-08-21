@@ -193,7 +193,6 @@
     <Object Include="Framework\GeoMath\ispc\Transform.obj" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc" />
@@ -206,6 +205,5 @@
     <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc" />
     <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc" />
-    <CustomBuild Include="Framework\Transpose.ispc" />
   </ItemGroup>
 </Project>

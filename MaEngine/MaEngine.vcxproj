@@ -205,103 +205,67 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 "%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2 --opt=fast-math;%(Outputs)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj</Outputs>
     </None>
-    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
-    </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\DivByElement.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\InverseMatrix4X4f.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\MatrixUtil.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\MulByElement.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\Normalize.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\Pow.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
     <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </Outputs>
-    </CustomBuild>
-    <None Include="Platform\Windows\he.exe" />
-    <CustomBuild Include="Framework\Transpose.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 "%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj;$(IntDir)%(Filename)_avx512skx.obj;</Outputs>
     </CustomBuild>
+    <None Include="Platform\Windows\he.exe" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Framework\GeoMath\ispc\Absolute.obj" />

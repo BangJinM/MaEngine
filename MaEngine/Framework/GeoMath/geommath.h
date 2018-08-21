@@ -25,7 +25,7 @@
 //#include "ispc/Absolute.h"
 //#include "ispc/Pow.h"
 //#include "ispc/DivByElement.h"
-//$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\"%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "%(Filename)_ispc.h" --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math
+//$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o "$(IntDir)%(Filename).obj" -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math
 ////$(ProjectDir)\External\ispc -O2 $(IntDir)"%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2,avx512skx-i32x16 --opt=fast-math
 //#ifndef PI
 //#define PI 3.14159265358979323846f
