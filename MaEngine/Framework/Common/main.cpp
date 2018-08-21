@@ -19,6 +19,8 @@
 
  */
 #include "Common/BaseApplication.h"
+#include "GeoMath/geommath.h"
+using namespace std;
 using namespace My;
 
 int main(int argc, char** argv) {
