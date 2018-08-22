@@ -15,6 +15,6 @@ namespace My {
 		virtual void  FreePage(void* p) = 0;
 	};
 
-	extern IMemoryManager*   g_pMemoryManager;
+	
 }
 #endif

@@ -151,7 +151,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Common\Allocator.h" />
+    <ClInclude Include="Framework\Common\AssetLoader.h" />
     <ClInclude Include="Framework\Common\BaseApplication.h" />
+    <ClInclude Include="Framework\Common\Buffer.h" />
     <ClInclude Include="Framework\GeoMath\geommath.h" />
     <ClInclude Include="Framework\Common\GfxConfiguration.h" />
     <ClInclude Include="Framework\Common\GraphicsManager.h" />

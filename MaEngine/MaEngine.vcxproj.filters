@@ -132,6 +132,12 @@
     <ClInclude Include="Framework\GeoMath\ispc\Transpose.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\Common\AssetLoader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\Buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

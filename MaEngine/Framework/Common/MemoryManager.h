@@ -12,12 +12,13 @@
 #include "portable.h"
 
 namespace My {
+	
 	ENUM(MemoryType)
 	{
 		CPU = "CPU"_i32,
-			GPU = "GPU"_i32
+		GPU = "GPU"_i32
 	};
-
+	
 	std::ostream& operator<< (std::ostream& out, MemoryType type);
 
 	class MemoryManager : implements IMemoryManager
@@ -31,6 +32,7 @@ namespace My {
 
 		void* AllocatePage(size_t size);
 		void  FreePage(void* p);
+		void Free(void* p, size_t size);
 
 	protected:
 		struct MemoryAllocationInfo
@@ -41,5 +43,6 @@ namespace My {
 
 		std::map<void*, MemoryAllocationInfo> m_mapMemoryAllocationInfo;
 	};
+	extern MemoryManager*   g_pMemoryManager;
 }
 #endif //MAENGINE_MEMORYMANAGER_H
