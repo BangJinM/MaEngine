@@ -2,72 +2,117 @@
 #include <cstdlib>
 #include <iostream>
 #include "MemoryManager.h"
+extern "C" void* malloc(size_t size);
+extern "C" void  free(void* p);
+
+#ifndef ALIGN
+#define ALIGN(x, a)         (((x) + ((a) - 1)) & ~((a) - 1))
+#endif
 
 using namespace My;
-using namespace std;
 
 namespace My {
-	std::ostream& operator<< (std::ostream& out, MemoryType type)
-	{
-		int32_t n = static_cast<int32_t>(type);
-		n = endian_net_unsigned_int<int32_t>(n);
-		char* c = reinterpret_cast<char*>(&n);
+	static const uint32_t kBlockSizes[] = {
+		// 4-increments
+		4,  8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48,
+		52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96,
 
-		for (size_t i = 0; i < sizeof(int32_t); i++) {
-			out << *c++;
-		}
+		// 32-increments
+		128, 160, 192, 224, 256, 288, 320, 352, 384,
+		416, 448, 480, 512, 544, 576, 608, 640,
 
-		return out;
-	}
+		// 64-increments
+		704, 768, 832, 896, 960, 1024
+	};
+
+	static const uint32_t kPageSize = 8192;
+	static const uint32_t kAlignment = 4;
+
+	// number of elements in the block size array
+	static const uint32_t kNumBlockSizes =
+		sizeof(kBlockSizes) / sizeof(kBlockSizes[0]);
+
+	// largest valid block size
+	static const uint32_t kMaxBlockSize =
+		kBlockSizes[kNumBlockSizes - 1];
+
+	size_t*        MemoryManager::m_pBlockSizeLookup;
+	Allocator*     MemoryManager::m_pAllocators;
 }
 
-int MemoryManager::Initialize()
+int My::MemoryManager::Initialize()
 {
+	// one-time initialization
+	static bool s_bInitialized = false;
+	if (!s_bInitialized) {
+		// initialize block size lookup table
+		m_pBlockSizeLookup = new size_t[kMaxBlockSize + 1];
+		size_t j = 0;
+		for (size_t i = 0; i <= kMaxBlockSize; i++) {
+			if (i > kBlockSizes[j]) ++j;
+			m_pBlockSizeLookup[i] = j;
+		}
+
+		// initialize the allocators
+		m_pAllocators = new Allocator[kNumBlockSizes];
+		for (size_t i = 0; i < kNumBlockSizes; i++) {
+			m_pAllocators[i].Reset(kBlockSizes[i], kPageSize, kAlignment);
+		}
+
+		s_bInitialized = true;
+	}
+
 	return 0;
 }
 
-void MemoryManager::Finalize()
+void My::MemoryManager::Finalize()
 {
-	assert(m_mapMemoryAllocationInfo.size() == 0);
+	delete[] m_pAllocators;
+	delete[] m_pBlockSizeLookup;
 }
 
-void MemoryManager::Tick()
+void My::MemoryManager::Tick()
 {
-#if DEBUG
-	static int count = 0;
-
-	if (count++ == 3600)
-	{
-		for (auto info : m_mapMemoryAllocationInfo)
-		{
-			cerr << info.first << '\t';
-			cerr << info.second.PageMemoryType;
-			cerr << info.second.PageSize;
-		}
-	}
-#endif
 }
 
-void* MemoryManager::AllocatePage(size_t size)
+Allocator* My::MemoryManager::LookUpAllocator(size_t size)
+{
+	// check eligibility for lookup
+	if (size <= kMaxBlockSize)
+		return m_pAllocators + m_pBlockSizeLookup[size];
+	else
+		return nullptr;
+}
+
+void* My::MemoryManager::Allocate(size_t size)
+{
+	Allocator* pAlloc = LookUpAllocator(size);
+	if (pAlloc)
+		return pAlloc->Allocate();
+	else
+		return malloc(size);
+}
+
+void* My::MemoryManager::Allocate(size_t size, size_t alignment)
 {
 	uint8_t* p;
+	size += alignment;
+	Allocator* pAlloc = LookUpAllocator(size);
+	if (pAlloc)
+		p = reinterpret_cast<uint8_t*>(pAlloc->Allocate());
+	else
+		p = reinterpret_cast<uint8_t*>(malloc(size));
 
-	p = static_cast<uint8_t*>(malloc(size));
-	if (p)
-	{
-		MemoryAllocationInfo info = { size, MemoryType::CPU };
-		m_mapMemoryAllocationInfo.insert({ p, info });
-	}
+	p = reinterpret_cast<uint8_t*>(ALIGN(reinterpret_cast<size_t>(p), alignment));
 
 	return static_cast<void*>(p);
 }
 
-void MemoryManager::FreePage(void* p)
+void My::MemoryManager::Free(void* p, size_t size)
 {
-	auto it = m_mapMemoryAllocationInfo.find(p);
-	if (it != m_mapMemoryAllocationInfo.end())
-	{
-		m_mapMemoryAllocationInfo.erase(it);
+	Allocator* pAlloc = LookUpAllocator(size);
+	if (pAlloc)
+		pAlloc->Free(p);
+	else
 		free(p);
-	}
 }

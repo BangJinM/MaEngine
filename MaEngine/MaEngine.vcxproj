@@ -154,6 +154,7 @@
     <ClInclude Include="Framework\Common\AssetLoader.h" />
     <ClInclude Include="Framework\Common\BaseApplication.h" />
     <ClInclude Include="Framework\Common\Buffer.h" />
+    <ClInclude Include="Framework\Common\FileUtils\Image.h" />
     <ClInclude Include="Framework\GeoMath\geommath.h" />
     <ClInclude Include="Framework\Common\GfxConfiguration.h" />
     <ClInclude Include="Framework\Common\GraphicsManager.h" />
@@ -173,6 +174,7 @@
     <ClInclude Include="Framework\GeoMath\ispc\Transform.h" />
     <ClInclude Include="Framework\GeoMath\ispc\Transpose.h" />
     <ClInclude Include="Framework\Interface\IApplication .h" />
+    <ClInclude Include="Framework\Common\FileUtils\ImageParser.h" />
     <ClInclude Include="Framework\Interface\IMemoryManager.h" />
     <ClInclude Include="Framework\Interface\Interface.h" />
     <ClInclude Include="Framework\Interface\IRuntimeModule.h" />
@@ -183,6 +185,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Common\FileUtils\BmpParser.h" />
     <ClCompile Include="Framework\Common\Allocator.cpp" />
     <ClCompile Include="Framework\Common\BaseApplication.cpp" />
     <ClCompile Include="Framework\Common\GraphicsManager.cpp" />
@@ -269,6 +272,11 @@
     </CustomBuild>
     <None Include="Framework\GeoMath\ispc\.gitignore" />
     <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Framework\GeoMath\ispc\DotProduct.ispc">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>

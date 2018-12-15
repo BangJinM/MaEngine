@@ -8,41 +8,41 @@
 #include <map>
 #include <new>
 #include <ostream>
-#include "Interface/IMemoryManager.h"
 #include "portable.h"
-
+#include "Allocator.h"
+#include "Interface/IRuntimeModule.h"
 namespace My {
-	
-	ENUM(MemoryType)
-	{
-		CPU = "CPU"_i32,
-		GPU = "GPU"_i32
-	};
-	
-	std::ostream& operator<< (std::ostream& out, MemoryType type);
-
-	class MemoryManager : implements IMemoryManager
+	class MemoryManager : implements IRuntimeModule
 	{
 	public:
-		~MemoryManager() {}
-
-		int Initialize();
-		void Finalize();
-		void Tick();
-
-		void* AllocatePage(size_t size);
-		void  FreePage(void* p);
-		void Free(void* p, size_t size);
-
-	protected:
-		struct MemoryAllocationInfo
+		template<class T, typename... Arguments>
+		T* New(Arguments... parameters)
 		{
-			size_t PageSize;
-			MemoryType PageMemoryType;
-		};
+			return new (Allocate(sizeof(T))) T(parameters...);
+		}
 
-		std::map<void*, MemoryAllocationInfo> m_mapMemoryAllocationInfo;
+		template<class T>
+		void Delete(T* p)
+		{
+			p->~T();
+			Free(p, sizeof(T));
+		}
+
+	public:
+		virtual ~MemoryManager() {}
+
+		virtual int Initialize();
+		virtual void Finalize();
+		virtual void Tick();
+
+		void* Allocate(size_t size);
+		void* Allocate(size_t size, size_t alignment);
+		void  Free(void* p, size_t size);
+	private:
+		static size_t*        m_pBlockSizeLookup;
+		static Allocator*     m_pAllocators;
+	private:
+		static Allocator* LookUpAllocator(size_t size);
 	};
-	extern MemoryManager*   g_pMemoryManager;
 }
 #endif //MAENGINE_MEMORYMANAGER_H

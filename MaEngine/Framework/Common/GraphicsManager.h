@@ -6,7 +6,7 @@
 #define MAENGINE_GRAPHICSMANAGER_H
 
 
-#include "../Interface/IRuntimeModule.h"
+#include "Interface/IRuntimeModule.h"
 
 namespace My {
     class GraphicsManager : implements IRuntimeModule {

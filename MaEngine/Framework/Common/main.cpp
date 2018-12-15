@@ -14,10 +14,6 @@
  *  应用程序模块，用来抽象处理配置文件，特定平台的通知，创建窗口等需要与特定平台对接的部分
  *
  */
-//#include "../Interface/IApplication .h"
-/*
-
- */
 #include "Common/BaseApplication.h"
 #include "GeoMath/geommath.h"
 using namespace std;

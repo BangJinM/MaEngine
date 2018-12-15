@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "Interface/IRuntimeModule.h"
-
+#include "Buffer.h"
 namespace My {
 	class AssetLoader : public IRuntimeModule {
 	public:
