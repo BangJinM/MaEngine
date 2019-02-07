@@ -2,3 +2,4 @@
 /MaEngine/Debug
 /.vs
 !/MaEngine
+*.obj
