@@ -144,6 +144,24 @@
     <ClInclude Include="Framework\Common\FileUtils\ImageParser.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\Common\SceneBase\BaseObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\SceneBase\GameObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\SceneBase\Scene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\SceneBase\SceneNode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\Config.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\Renderer\BaseRenderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -183,6 +201,15 @@
       <Filter>Framework\Common</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Common\FileUtils\BmpParser.h">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Common\SceneBase\BaseObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Common\SceneBase\GameObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Common\SceneBase\Scene.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -202,11 +202,11 @@ namespace My {
 		ispc::CrossProduct(vec1, vec2, result);
 	}
 
-	template <template <typename> class TT, typename T>
-	inline void DotProduct(T& result, const TT<T>& vec1, const TT<T>& vec2)
-	{
-		ispc::DotProduct(vec1, vec2, &result, countof(vec1.data));
-	}
+	//template <template <typename> class TT, typename T>
+	//inline void DotProduct(T& result, const TT<T>& vec1, const TT<T>& vec2)
+	//{
+	//	ispc::DotProduct(vec1, vec2, &result, countof(vec1.data));
+	//}
 
 	template <typename T>
 	inline void MulByElement(T& result, const T& a, const T& b)
@@ -311,11 +311,11 @@ namespace My {
 		ispc::Transpose(matrix1, result, ROWS, COLS);
 	}
 
-	template <typename T>
-	inline void Normalize(T& result)
-	{
-		ispc::Normalize(result, countof(result.data));
-	}
+	//template <typename T>
+	//inline void Normalize(T& result)
+	//{
+	//	ispc::Normalize(result, countof(result.data));
+	//}
 
 	inline void MatrixRotationYawPitchRoll(Matrix4X4f& matrix, const float yaw, const float pitch, const float roll)
 	{
@@ -344,49 +344,49 @@ namespace My {
 		return;
 	}
 
-	inline void TransformCoord(Vector3f& vector, const Matrix4X4f& matrix)
-	{
-		ispc::Transform(vector, matrix);
-	}
+	//inline void TransformCoord(Vector3f& vector, const Matrix4X4f& matrix)
+	//{
+	//	ispc::Transform(vector, matrix);
+	//}
 
-	inline void Transform(Vector4f& vector, const Matrix4X4f& matrix)
-	{
-		ispc::Transform(vector, matrix);
+	//inline void Transform(Vector4f& vector, const Matrix4X4f& matrix)
+	//{
+	//	ispc::Transform(vector, matrix);
 
-		return;
-	}
+	//	return;
+	//}
 
 	inline void BuildViewMatrix(Matrix4X4f& result, const Vector3f position, const Vector3f lookAt, const Vector3f up)
 	{
-		Vector3f zAxis, xAxis, yAxis;
-		float result1, result2, result3;
+		//Vector3f zAxis, xAxis, yAxis;
+		//float result1, result2, result3;
 
-		zAxis = lookAt - position;
-		Normalize(zAxis);
+		//zAxis = lookAt - position;
+		////Normalize(zAxis);
 
-		CrossProduct(xAxis, up, zAxis);
-		Normalize(xAxis);
+		//CrossProduct(xAxis, up, zAxis);
+		//Normalize(xAxis);
 
-		CrossProduct(yAxis, zAxis, xAxis);
+		//CrossProduct(yAxis, zAxis, xAxis);
 
-		DotProduct(result1, xAxis, position);
-		result1 = -result1;
+		//DotProduct(result1, xAxis, position);
+		//result1 = -result1;
 
-		DotProduct(result2, yAxis, position);
-		result2 = -result2;
+		//DotProduct(result2, yAxis, position);
+		//result2 = -result2;
 
-		DotProduct(result3, zAxis, position);
-		result3 = -result3;
+		//DotProduct(result3, zAxis, position);
+		//result3 = -result3;
 
-		// Set the computed values in the view matrix.
-		Matrix4X4f tmp = { { {
-			{ xAxis.x, yAxis.x, zAxis.x, 0.0f },
-		{ xAxis.y, yAxis.y, zAxis.y, 0.0f },
-		{ xAxis.z, yAxis.z, zAxis.z, 0.0f },
-		{ result1, result2, result3, 1.0f }
-			} } };
+		//// Set the computed values in the view matrix.
+		//Matrix4X4f tmp = { { {
+		//	{ xAxis.x, yAxis.x, zAxis.x, 0.0f },
+		//{ xAxis.y, yAxis.y, zAxis.y, 0.0f },
+		//{ xAxis.z, yAxis.z, zAxis.z, 0.0f },
+		//{ result1, result2, result3, 1.0f }
+		//	} } };
 
-		result = tmp;
+		//result = tmp;
 	}
 
 	inline void BuildIdentityMatrix(Matrix4X4f& matrix)
