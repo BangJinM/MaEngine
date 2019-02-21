@@ -23,7 +23,7 @@
     <ProjectGuid>{7F46AF57-08AC-408C-AE5F-CAEC6F686A9E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>MaEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -176,6 +176,13 @@
     <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h" />
     <ClInclude Include="Framework\GeoMath\ispc\Transform.h" />
     <ClInclude Include="Framework\GeoMath\ispc\Transpose.h" />
+    <ClInclude Include="Framework\GeoMath\math\CCMath.h" />
+    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h" />
+    <ClInclude Include="Framework\GeoMath\math\Mat4.h" />
+    <ClInclude Include="Framework\GeoMath\math\Quaternion.h" />
+    <ClInclude Include="Framework\GeoMath\math\Vec2.h" />
+    <ClInclude Include="Framework\GeoMath\math\Vec3.h" />
+    <ClInclude Include="Framework\GeoMath\math\Vec4.h" />
     <ClInclude Include="Framework\Interface\IApplication .h" />
     <ClInclude Include="Framework\Common\FileUtils\ImageParser.h" />
     <ClInclude Include="Framework\Interface\IMemoryManager.h" />
@@ -199,6 +206,11 @@
     <ClCompile Include="Framework\Common\main.cpp" />
     <ClCompile Include="Framework\Common\MemoryManager.cpp" />
     <ClCompile Include="Framework\Common\SceneBase\GameObject.cpp" />
+    <ClCompile Include="Framework\GeoMath\math\Mat4.cpp" />
+    <ClCompile Include="Framework\GeoMath\math\Quaternion.cpp" />
+    <ClCompile Include="Framework\GeoMath\math\Vec2.cpp" />
+    <ClCompile Include="Framework\GeoMath\math\Vec3.cpp" />
+    <ClCompile Include="Framework\GeoMath\math\Vec4.cpp" />
     <ClCompile Include="Platform\Empty\EmptyApplication.cpp" />
     <ClCompile Include="Platform\Linux\helloengine_xcb.c" />
     <ClCompile Include="Platform\Linux\XcbApplication.cpp" />
@@ -318,6 +330,11 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
     </CustomBuild>
+    <None Include="Framework\GeoMath\math\Mat4.inl" />
+    <None Include="Framework\GeoMath\math\Quaternion.inl" />
+    <None Include="Framework\GeoMath\math\Vec2.inl" />
+    <None Include="Framework\GeoMath\math\Vec3.inl" />
+    <None Include="Framework\GeoMath\math\Vec4.inl" />
     <None Include="Platform\Windows\he.exe" />
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,16 @@
 
 #pragma once
-#include <map>
+#include <list>
+#include "Common/Renderer/BaseRenderer.h"
 #include "SceneNode.h"
 class Scene
 {
 public:
 	Scene();
 	~Scene();
-
+	int AddRenderer(BaseRenderer *renderer);
+	BaseRenderer* RemoveRenderer(int handle);
 private:
-	std::map<int, SceneNode> *sceneNodes;
+	std::list<SceneNode> *sceneNodes;
 };
 

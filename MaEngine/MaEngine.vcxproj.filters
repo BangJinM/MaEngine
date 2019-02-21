@@ -162,6 +162,27 @@
     <ClInclude Include="Framework\Common\Renderer\BaseRenderer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\Mat4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\Quaternion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\Vec2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\Vec3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\Vec4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\CCMath.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -212,6 +233,21 @@
     <ClCompile Include="Framework\Common\SceneBase\Scene.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Framework\GeoMath\math\Mat4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GeoMath\math\Quaternion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GeoMath\math\Vec2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GeoMath\math\Vec3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\GeoMath\math\Vec4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Platform\Windows\he.exe">
@@ -219,6 +255,21 @@
     </None>
     <None Include="External\ispc.exe" />
     <None Include="Framework\GeoMath\ispc\.gitignore" />
+    <None Include="Framework\GeoMath\math\Mat4.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="Framework\GeoMath\math\Quaternion.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="Framework\GeoMath\math\Vec2.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="Framework\GeoMath\math\Vec3.inl">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="Framework\GeoMath\math\Vec4.inl">
+      <Filter>头文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
