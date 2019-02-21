@@ -176,7 +176,7 @@
     <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h" />
     <ClInclude Include="Framework\GeoMath\ispc\Transform.h" />
     <ClInclude Include="Framework\GeoMath\ispc\Transpose.h" />
-    <ClInclude Include="Framework\GeoMath\math\CCMath.h" />
+    <ClInclude Include="Framework\GeoMath\CCMath.h" />
     <ClInclude Include="Framework\GeoMath\math\CCMathBase.h" />
     <ClInclude Include="Framework\GeoMath\math\Mat4.h" />
     <ClInclude Include="Framework\GeoMath\math\Quaternion.h" />
@@ -335,7 +335,6 @@
     <None Include="Framework\GeoMath\math\Vec2.inl" />
     <None Include="Framework\GeoMath\math\Vec3.inl" />
     <None Include="Framework\GeoMath\math\Vec4.inl" />
-    <None Include="Platform\Windows\he.exe" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />

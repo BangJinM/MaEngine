@@ -16,6 +16,8 @@
  */
 #include "Common/BaseApplication.h"
 #include "GeoMath/geommath.h"
+#include "Geomath/CCMath.h"
+
 using namespace std;
 using namespace My;
 

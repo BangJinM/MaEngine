@@ -177,10 +177,10 @@
     <ClInclude Include="Framework\GeoMath\math\Vec4.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\GeoMath\math\CCMath.h">
+    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h">
+    <ClInclude Include="Framework\GeoMath\CCMath.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -250,9 +250,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Platform\Windows\he.exe">
-      <Filter>Platform\Windows</Filter>
-    </None>
     <None Include="External\ispc.exe" />
     <None Include="Framework\GeoMath\ispc\.gitignore" />
     <None Include="Framework\GeoMath\math\Mat4.inl">
