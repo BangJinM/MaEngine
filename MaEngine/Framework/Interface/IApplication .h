@@ -8,7 +8,7 @@
 #include "Interface.h"
 #include "IRuntimeModule.h"
 
-namespace My {
+namespace MaEngine {
     Interface IApplication :
             implements IRuntimeModule {
     public:

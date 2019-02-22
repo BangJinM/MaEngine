@@ -8,7 +8,7 @@
 
 #include "GeoMath/math/CCMathBase.h"
 
-
+namespace MaEngine {
 
 class Mat4;
 
@@ -137,10 +137,8 @@ public:
     /** equals to Vec4(0,0,0,1) */
     static const Vec4 UNIT_W;
 };
-
-
 inline Vec4 operator*(float x, const Vec4& v);
+}
 
 #include "GeoMath/math/Vec4.inl"
-
 #endif // MATH_VEC4_H

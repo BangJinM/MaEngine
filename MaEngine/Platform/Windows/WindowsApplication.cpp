@@ -5,16 +5,16 @@
 #include "WindowsApplication.h"
 #include <tchar.h>
 
-using namespace My;
+using namespace MaEngine;
 
 
-namespace My {
+namespace MaEngine {
     GfxConfiguration config(8, 8, 8, 8, 32, 0, 0, 960, 540);
     WindowsApplication  g_App(config);
     IApplication*       g_pApp = &g_App;
 }
 
-int My::WindowsApplication::Initialize()
+int MaEngine::WindowsApplication::Initialize()
 {
     int result;
 
@@ -67,11 +67,11 @@ int My::WindowsApplication::Initialize()
     return result;
 }
 
-void My::WindowsApplication::Finalize()
+void MaEngine::WindowsApplication::Finalize()
 {
 }
 
-void My::WindowsApplication::Tick()
+void MaEngine::WindowsApplication::Tick()
 {
     // this struct holds Windows event messages
     MSG msg;
@@ -89,7 +89,7 @@ void My::WindowsApplication::Tick()
 }
 
 // this is the main message handler for the program
-LRESULT CALLBACK My::WindowsApplication::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK MaEngine::WindowsApplication::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     // sort through and find what code to run for the message given
     switch(message)

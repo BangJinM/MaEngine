@@ -1,7 +1,7 @@
 #include "ImageParser.h"
 
 #include <iostream>
-namespace My {
+namespace MaEngine {
 
 #pragma pack(push,1)
 	typedef struct _BITMAP_FILEHEADER {

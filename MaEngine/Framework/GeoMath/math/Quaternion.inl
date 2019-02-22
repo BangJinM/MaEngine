@@ -1,6 +1,6 @@
 
 #include "GeoMath/math/Quaternion.h"
-
+namespace MaEngine {
 inline Quaternion Quaternion::operator*(const Quaternion& q) const
 {
     Quaternion result(*this);
@@ -27,3 +27,4 @@ inline Vec3 Quaternion::operator*(const Vec3& v) const
     return v + uv + uuv;
 }
 
+}

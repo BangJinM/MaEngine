@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <iostream>
 
-namespace My {
+namespace MaEngine {
     struct GfxConfiguration {
         /// Inline all-elements constructor.
         /// \param[in] _apiVer the API and version information

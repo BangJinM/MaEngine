@@ -1,7 +1,7 @@
 #pragma once
 #include "GeoMath/geommath.h"
 
-namespace My {
+namespace MaEngine {
 
 	typedef struct _Image {
 		//¿í

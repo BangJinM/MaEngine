@@ -12,7 +12,7 @@
 #include <windowsx.h>
 #include "Common/BaseApplication.h"
 
-namespace My {
+namespace MaEngine {
     class WindowsApplication : public BaseApplication
     {
     public:

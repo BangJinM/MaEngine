@@ -7,7 +7,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace My {
+namespace MaEngine {
 
 	struct BlockHeader {
 		// union-ed with data

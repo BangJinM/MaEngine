@@ -19,7 +19,7 @@
 #include "Geomath/CCMath.h"
 
 using namespace std;
-using namespace My;
+using namespace MaEngine;
 
 int main(int argc, char** argv) {
     int ret;

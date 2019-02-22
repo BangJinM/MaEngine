@@ -4,7 +4,7 @@
 
 #include "EmptyApplication.h"
 
-namespace My {
+namespace MaEngine {
     extern BaseApplication  g_App;
 	extern IApplication* g_pApp /*= &g_App*/;
 }

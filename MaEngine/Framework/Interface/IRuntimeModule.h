@@ -7,7 +7,7 @@
 
 #include "Interface.h"
 
-namespace My {
+namespace MaEngine {
     Interface IRuntimeModule {
     public:
         virtual ~IRuntimeModule() {};

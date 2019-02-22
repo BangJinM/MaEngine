@@ -10,27 +10,27 @@
 #define ALIGN(x, a)         (((x) + ((a) - 1)) & ~((a) - 1))
 #endif
 
-using namespace My;
+using namespace MaEngine;
 
-My::Allocator::Allocator()
+MaEngine::Allocator::Allocator()
 	: m_pPageList(nullptr), m_pFreeList(nullptr),
 	m_szDataSize(0), m_szPageSize(0),
 	m_szAlignmentSize(0), m_szBlockSize(0), m_nBlocksPerPage(0)
 {
 }
 
-My::Allocator::Allocator(size_t data_size, size_t page_size, size_t alignment)
+MaEngine::Allocator::Allocator(size_t data_size, size_t page_size, size_t alignment)
 	: m_pPageList(nullptr), m_pFreeList(nullptr)
 {
 	Reset(data_size, page_size, alignment);
 }
 
-My::Allocator::~Allocator()
+MaEngine::Allocator::~Allocator()
 {
 	FreeAll();
 }
 
-void My::Allocator::Reset(size_t data_size, size_t page_size, size_t alignment)
+void MaEngine::Allocator::Reset(size_t data_size, size_t page_size, size_t alignment)
 {
 	FreeAll();
 
@@ -51,7 +51,7 @@ void My::Allocator::Reset(size_t data_size, size_t page_size, size_t alignment)
 	m_nBlocksPerPage = (m_szPageSize - sizeof(PageHeader)) / m_szBlockSize;
 }
 
-void* My::Allocator::Allocate()
+void* MaEngine::Allocator::Allocate()
 {
 	if (!m_pFreeList) {
 		// allocate a new page
@@ -92,7 +92,7 @@ void* My::Allocator::Allocate()
 	return reinterpret_cast<void*>(freeBlock);
 }
 
-void My::Allocator::Free(void* p)
+void MaEngine::Allocator::Free(void* p)
 {
 	BlockHeader* block = reinterpret_cast<BlockHeader*>(p);
 
@@ -105,7 +105,7 @@ void My::Allocator::Free(void* p)
 	++m_nFreeBlocks;
 }
 
-void My::Allocator::FreeAll()
+void MaEngine::Allocator::FreeAll()
 {
 	PageHeader* pPage = m_pPageList;
 	while (pPage) {
@@ -124,7 +124,7 @@ void My::Allocator::FreeAll()
 }
 
 #if defined(_DEBUG)
-void My::Allocator::FillFreePage(PageHeader *pPage)
+void MaEngine::Allocator::FillFreePage(PageHeader *pPage)
 {
 	// page header
 	pPage->pNext = nullptr;
@@ -138,7 +138,7 @@ void My::Allocator::FillFreePage(PageHeader *pPage)
 	}
 }
 
-void My::Allocator::FillFreeBlock(BlockHeader *pBlock)
+void MaEngine::Allocator::FillFreeBlock(BlockHeader *pBlock)
 {
 	// block header + data
 	memset(pBlock, PATTERN_FREE, m_szBlockSize - m_szAlignmentSize);
@@ -148,7 +148,7 @@ void My::Allocator::FillFreeBlock(BlockHeader *pBlock)
 		PATTERN_ALIGN, m_szAlignmentSize);
 }
 
-void My::Allocator::FillAllocatedBlock(BlockHeader *pBlock)
+void MaEngine::Allocator::FillAllocatedBlock(BlockHeader *pBlock)
 {
 	// block header + data
 	memset(pBlock, PATTERN_ALLOC, m_szBlockSize - m_szAlignmentSize);
@@ -160,7 +160,7 @@ void My::Allocator::FillAllocatedBlock(BlockHeader *pBlock)
 
 #endif
 
-My::BlockHeader* My::Allocator::NextBlock(BlockHeader *pBlock)
+MaEngine::BlockHeader* MaEngine::Allocator::NextBlock(BlockHeader *pBlock)
 {
 	return reinterpret_cast<BlockHeader *>(reinterpret_cast<uint8_t*>(pBlock) + m_szBlockSize);
 }

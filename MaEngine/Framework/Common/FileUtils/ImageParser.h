@@ -4,7 +4,7 @@
 #include "Image.h"
 #include "Common/Buffer.h"
 
-namespace My {
+namespace MaEngine {
 	Interface ImageParser{
 	public:
 		//ªÒµ√Õº∆¨

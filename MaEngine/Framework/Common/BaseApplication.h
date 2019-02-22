@@ -8,10 +8,10 @@
 #include "Interface/Interface.h"
 #include "Interface/IApplication .h"
 #include "GfxConfiguration.h"
-namespace My {
+namespace MaEngine {
 	extern IApplication* g_pApp;
 }
-namespace My {
+namespace MaEngine {
     class BaseApplication : implements IApplication {
     public:
         BaseApplication(GfxConfiguration &cfg);

@@ -3,7 +3,7 @@
 
 #include "IRuntimeModule.h"
 
-namespace My {
+namespace MaEngine {
 	Interface IMemoryManager : implements IRuntimeModule
 	{
 	public:

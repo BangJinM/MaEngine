@@ -9,9 +9,9 @@ extern "C" void  free(void* p);
 #define ALIGN(x, a)         (((x) + ((a) - 1)) & ~((a) - 1))
 #endif
 
-using namespace My;
+using namespace MaEngine;
 
-namespace My {
+namespace MaEngine {
 	static const uint32_t kBlockSizes[] = {
 		// 4-increments
 		4,  8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48,
@@ -40,7 +40,7 @@ namespace My {
 	Allocator*     MemoryManager::m_pAllocators;
 }
 
-int My::MemoryManager::Initialize()
+int MaEngine::MemoryManager::Initialize()
 {
 	// one-time initialization
 	static bool s_bInitialized = false;
@@ -65,17 +65,17 @@ int My::MemoryManager::Initialize()
 	return 0;
 }
 
-void My::MemoryManager::Finalize()
+void MaEngine::MemoryManager::Finalize()
 {
 	delete[] m_pAllocators;
 	delete[] m_pBlockSizeLookup;
 }
 
-void My::MemoryManager::Tick()
+void MaEngine::MemoryManager::Tick()
 {
 }
 
-Allocator* My::MemoryManager::LookUpAllocator(size_t size)
+Allocator* MaEngine::MemoryManager::LookUpAllocator(size_t size)
 {
 	// check eligibility for lookup
 	if (size <= kMaxBlockSize)
@@ -84,7 +84,7 @@ Allocator* My::MemoryManager::LookUpAllocator(size_t size)
 		return nullptr;
 }
 
-void* My::MemoryManager::Allocate(size_t size)
+void* MaEngine::MemoryManager::Allocate(size_t size)
 {
 	Allocator* pAlloc = LookUpAllocator(size);
 	if (pAlloc)
@@ -93,7 +93,7 @@ void* My::MemoryManager::Allocate(size_t size)
 		return malloc(size);
 }
 
-void* My::MemoryManager::Allocate(size_t size, size_t alignment)
+void* MaEngine::MemoryManager::Allocate(size_t size, size_t alignment)
 {
 	uint8_t* p;
 	size += alignment;
@@ -108,7 +108,7 @@ void* My::MemoryManager::Allocate(size_t size, size_t alignment)
 	return static_cast<void*>(p);
 }
 
-void My::MemoryManager::Free(void* p, size_t size)
+void MaEngine::MemoryManager::Free(void* p, size_t size)
 {
 	Allocator* pAlloc = LookUpAllocator(size);
 	if (pAlloc)

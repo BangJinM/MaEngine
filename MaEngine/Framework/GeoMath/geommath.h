@@ -35,7 +35,7 @@
 #define TWO_PI 3.14159265358979323846f * 2.0f
 #endif
 
-namespace My {
+namespace MaEngine {
 	template<typename T, size_t SizeOfArray>
 	constexpr size_t countof(T(&)[SizeOfArray]) { return SizeOfArray; }
 
@@ -80,8 +80,8 @@ namespace My {
 			struct { T x, y; };
 			struct { T r, g; };
 			struct { T u, v; };
-			swizzle<My::Vector2Type, T, 0, 1> xy;
-			swizzle<My::Vector2Type, T, 1, 0> yx;
+			swizzle<MaEngine::Vector2Type, T, 0, 1> xy;
+			swizzle<MaEngine::Vector2Type, T, 1, 0> yx;
 		};
 
 		Vector2Type<T>() {};
@@ -101,18 +101,18 @@ namespace My {
 			T data[3];
 			struct { T x, y, z; };
 			struct { T r, g, b; };
-			swizzle<My::Vector2Type, T, 0, 1> xy;
-			swizzle<My::Vector2Type, T, 1, 0> yx;
-			swizzle<My::Vector2Type, T, 0, 2> xz;
-			swizzle<My::Vector2Type, T, 2, 0> zx;
-			swizzle<My::Vector2Type, T, 1, 2> yz;
-			swizzle<My::Vector2Type, T, 2, 1> zy;
-			swizzle<My::Vector3Type, T, 0, 1, 2> xyz;
-			swizzle<My::Vector3Type, T, 1, 0, 2> yxz;
-			swizzle<My::Vector3Type, T, 0, 2, 1> xzy;
-			swizzle<My::Vector3Type, T, 2, 0, 1> zxy;
-			swizzle<My::Vector3Type, T, 1, 2, 0> yzx;
-			swizzle<My::Vector3Type, T, 2, 1, 0> zyx;
+			swizzle<MaEngine::Vector2Type, T, 0, 1> xy;
+			swizzle<MaEngine::Vector2Type, T, 1, 0> yx;
+			swizzle<MaEngine::Vector2Type, T, 0, 2> xz;
+			swizzle<MaEngine::Vector2Type, T, 2, 0> zx;
+			swizzle<MaEngine::Vector2Type, T, 1, 2> yz;
+			swizzle<MaEngine::Vector2Type, T, 2, 1> zy;
+			swizzle<MaEngine::Vector3Type, T, 0, 1, 2> xyz;
+			swizzle<MaEngine::Vector3Type, T, 1, 0, 2> yxz;
+			swizzle<MaEngine::Vector3Type, T, 0, 2, 1> xzy;
+			swizzle<MaEngine::Vector3Type, T, 2, 0, 1> zxy;
+			swizzle<MaEngine::Vector3Type, T, 1, 2, 0> yzx;
+			swizzle<MaEngine::Vector3Type, T, 2, 1, 0> zyx;
 		};
 
 		Vector3Type<T>() {};
@@ -132,12 +132,12 @@ namespace My {
 			T data[4];
 			struct { T x, y, z, w; };
 			struct { T r, g, b, a; };
-			swizzle<My::Vector3Type, T, 0, 2, 1> xzy;
-			swizzle<My::Vector3Type, T, 1, 0, 2> yxz;
-			swizzle<My::Vector3Type, T, 1, 2, 0> yzx;
-			swizzle<My::Vector3Type, T, 2, 0, 1> zxy;
-			swizzle<My::Vector3Type, T, 2, 1, 0> zyx;
-			swizzle<My::Vector4Type, T, 2, 1, 0, 3> bgra;
+			swizzle<MaEngine::Vector3Type, T, 0, 2, 1> xzy;
+			swizzle<MaEngine::Vector3Type, T, 1, 0, 2> yxz;
+			swizzle<MaEngine::Vector3Type, T, 1, 2, 0> yzx;
+			swizzle<MaEngine::Vector3Type, T, 2, 0, 1> zxy;
+			swizzle<MaEngine::Vector3Type, T, 2, 1, 0> zyx;
+			swizzle<MaEngine::Vector4Type, T, 2, 1, 0, 3> bgra;
 		};
 
 		Vector4Type<T>() {};

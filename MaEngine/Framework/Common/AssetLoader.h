@@ -7,7 +7,7 @@
 
 #include "Interface/IRuntimeModule.h"
 #include "Buffer.h"
-namespace My {
+namespace MaEngine {
 	class AssetLoader : public IRuntimeModule {
 	public:
 		virtual ~AssetLoader() {};

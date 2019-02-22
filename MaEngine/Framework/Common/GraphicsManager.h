@@ -8,7 +8,7 @@
 
 #include "Interface/IRuntimeModule.h"
 
-namespace My {
+namespace MaEngine {
     class GraphicsManager : implements IRuntimeModule {
     public:
         virtual ~GraphicsManager() {}

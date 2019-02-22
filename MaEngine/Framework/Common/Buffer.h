@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include "MemoryManager.h"
 
-namespace My {
+namespace MaEngine {
 	extern MemoryManager* g_pMemoryManager;
 	class Buffer {
 	public:

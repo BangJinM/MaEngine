@@ -11,7 +11,7 @@
 #include "portable.h"
 #include "Allocator.h"
 #include "Interface/IRuntimeModule.h"
-namespace My {
+namespace MaEngine {
 	class MemoryManager : implements IRuntimeModule
 	{
 	public:

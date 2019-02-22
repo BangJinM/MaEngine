@@ -3,21 +3,21 @@
 //
 #include "BaseApplication.h"
 #include <iostream>
-bool My::BaseApplication::m_bQuit = false;
-void My::BaseApplication::Finalize() {}
+bool MaEngine::BaseApplication::m_bQuit = false;
+void MaEngine::BaseApplication::Finalize() {}
 
-void My::BaseApplication::Tick() {}
+void MaEngine::BaseApplication::Tick() {}
 
-int My::BaseApplication::Initialize() {
+int MaEngine::BaseApplication::Initialize() {
     std::cout << m_Config;
     return 0;
 }
 
-bool My::BaseApplication::IsQuit() {
+bool MaEngine::BaseApplication::IsQuit() {
     return m_bQuit;
 }
 
-My::BaseApplication::BaseApplication(GfxConfiguration& cfg)
+MaEngine::BaseApplication::BaseApplication(GfxConfiguration& cfg)
   :m_Config(cfg)
 {
 
