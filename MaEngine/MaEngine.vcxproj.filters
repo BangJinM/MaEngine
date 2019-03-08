@@ -183,6 +183,9 @@
     <ClInclude Include="Framework\GeoMath\CCMath.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\Common\Renderer\RendererManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -246,6 +249,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Vec4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Common\Renderer\RendererManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

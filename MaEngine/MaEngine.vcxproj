@@ -194,6 +194,7 @@
     <ClInclude Include="Platform\Windows\WindowsApplication.h" />
     <ClInclude Include="Framework\Common\SceneBase\Scene.h" />
     <ClInclude Include="Framework\Common\SceneBase\SceneNode.h" />
+    <ClInclude Include="Framework\Common\Renderer\RendererManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -218,6 +219,7 @@
     <ClCompile Include="Platform\Windows\helloengine_win.c" />
     <ClCompile Include="Platform\Windows\WindowsApplication.cpp" />
     <ClCompile Include="Framework\Common\SceneBase\Scene.cpp" />
+    <ClCompile Include="Framework\Common\Renderer\RendererManager.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
