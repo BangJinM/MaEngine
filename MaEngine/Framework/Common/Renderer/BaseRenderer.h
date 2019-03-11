@@ -1,10 +1,14 @@
 #pragma once
-class BaseRenderer
-{
-public:
-	BaseRenderer();
-	virtual ~BaseRenderer();
+namespace MaEngine {
+	class BaseRenderer
+	{
+	public:
+		BaseRenderer(){}
+		virtual ~BaseRenderer() {}
 
-	virtual void Render(int materialIndex/*, const ChannelAssigns& channels*/) = 0;
-};
+		virtual void Render(int materialIndex/*, const ChannelAssigns& channels*/) {}
 
+	private:
+		int index;
+	};
+}

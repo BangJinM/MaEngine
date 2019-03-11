@@ -186,6 +186,12 @@
     <ClInclude Include="Framework\Common\Renderer\RendererManager.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\Common\Renderer\RectRenderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\Renderer\TriangleRenderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

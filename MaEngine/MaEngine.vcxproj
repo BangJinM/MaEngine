@@ -152,6 +152,8 @@
   <ItemGroup>
     <ClInclude Include="Framework\Common\Config.h" />
     <ClInclude Include="Framework\Common\Renderer\BaseRenderer.h" />
+    <ClInclude Include="Framework\Common\Renderer\RectRenderer.h" />
+    <ClInclude Include="Framework\Common\Renderer\TriangleRenderer.h" />
     <ClInclude Include="Framework\Common\SceneBase\BaseObject.h" />
     <ClInclude Include="Framework\Common\Allocator.h" />
     <ClInclude Include="Framework\Common\AssetLoader.h" />

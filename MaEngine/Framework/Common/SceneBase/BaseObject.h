@@ -1,8 +1,10 @@
 #pragma once
-class BaseObject
-{
-public:
-	BaseObject();
-	~BaseObject();
-};
+namespace MaEngine {
+	class BaseObject
+	{
+	public:
+		BaseObject();
+		~BaseObject();
+	};
 
+}

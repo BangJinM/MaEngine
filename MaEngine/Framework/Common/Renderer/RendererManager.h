@@ -1,21 +1,24 @@
 #pragma once
 
 #include "BaseRenderer.h"
-#include <queue>
-namespace My{
+#include <list>
 
+namespace MaEngine {
+	class BaseRenderer;
 	class RendererManager
 	{
 	public:
-		static RendererManager manager;
+		static RendererManager* getIntance();
+		
 		RendererManager();
 		~RendererManager();
 
 		void Renderers();
 
 		bool RemoveRenderer();
-		bool AddRenderer(BaseRenderer*);
+		bool AddRenderer(BaseRenderer* base);
 	private:
-		std::queue<BaseRenderer*> *renderers;
+		std::list<BaseRenderer*> renderers;
 	};
+	
 }
