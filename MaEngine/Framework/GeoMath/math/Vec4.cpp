@@ -1,7 +1,7 @@
 #include "GeoMath/math/Vec4.h"
 
 #include <cmath>
-namespace MaEngine {
+NAMESPACEBEGINE
 	Vec4::Vec4()
 		: x(0.0f), y(0.0f), z(0.0f), w(0.0f)
 	{
@@ -278,4 +278,4 @@ namespace MaEngine {
 	const Vec4 Vec4::UNIT_Y = Vec4(0.0f, 1.0f, 0.0f, 0.0f);
 	const Vec4 Vec4::UNIT_Z = Vec4(0.0f, 0.0f, 1.0f, 0.0f);
 	const Vec4 Vec4::UNIT_W = Vec4(0.0f, 0.0f, 0.0f, 1.0f);
-}
+NAMESPACEEND

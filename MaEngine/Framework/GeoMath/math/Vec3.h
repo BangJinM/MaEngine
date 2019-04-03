@@ -3,8 +3,9 @@
 
 #include <cmath>
 #include "GeoMath/math/CCMathBase.h"
-namespace MaEngine {
-	class Vec3
+#include "MaEngineDef.h"
+NAMESPACEBEGINE
+    MaEngine_DLL class Vec3
 	{
 	public:
 		float x;
@@ -125,8 +126,7 @@ namespace MaEngine {
 		static const Vec3 UNIT_Z;
 	};
 	inline Vec3 operator*(float x, const Vec3& v);
-
-}
+NAMESPACEEND
 
 #include "GeoMath/math/Vec3.inl"
 #endif // MATH_VEC3_H

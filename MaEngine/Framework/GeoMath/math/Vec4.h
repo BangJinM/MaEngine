@@ -7,15 +7,12 @@
 #endif
 
 #include "GeoMath/math/CCMathBase.h"
+#include "MaEngineDef.h"
 
-namespace MaEngine {
+NAMESPACEBEGINE
 
 class Mat4;
-
-/**
- * Defines 4-element floating point vector.
- */
-class Vec4
+MaEngine_DLL class Vec4
 {
 public:
 #ifdef __SSE__
@@ -138,7 +135,7 @@ public:
     static const Vec4 UNIT_W;
 };
 inline Vec4 operator*(float x, const Vec4& v);
-}
+NAMESPACEEND
 
 #include "GeoMath/math/Vec4.inl"
 #endif // MATH_VEC4_H

@@ -27,7 +27,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -59,21 +59,26 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MaEngine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MaEngine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MaEngine.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="MaEngine.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(ProjectDir)\External;$(ProjectDir)\Platform;$(ProjectDir)\Framework;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)MaEngine\External;$(SolutionDir)MaEngine\Platform;$(SolutionDir)MaEngine\Framework;$(SolutionDir)MaEngine\;$(IncludePath)</IncludePath>
     <ReferencePath>$(ProjectDir)\External;$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)$(Configuration)\..\simulator\win32</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -93,6 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)MaEngine\External;$(SolutionDir)MaEngine\Platform;$(SolutionDir)MaEngine\Framework;$(SolutionDir)MaEngine\;$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,34 +156,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Framework\Common\Config.h" />
-    <ClInclude Include="Framework\Common\Renderer\BaseRenderer.h" />
-    <ClInclude Include="Framework\Common\Renderer\RectRenderer.h" />
-    <ClInclude Include="Framework\Common\Renderer\TriangleRenderer.h" />
-    <ClInclude Include="Framework\Common\SceneBase\BaseObject.h" />
-    <ClInclude Include="Framework\Common\Allocator.h" />
-    <ClInclude Include="Framework\Common\AssetLoader.h" />
-    <ClInclude Include="Framework\Common\BaseApplication.h" />
-    <ClInclude Include="Framework\Common\Buffer.h" />
-    <ClInclude Include="Framework\Common\FileUtils\Image.h" />
-    <ClInclude Include="Framework\GeoMath\geommath.h" />
-    <ClInclude Include="Framework\Common\GfxConfiguration.h" />
-    <ClInclude Include="Framework\Common\GraphicsManager.h" />
-    <ClInclude Include="Framework\Common\MemoryManager.h" />
-    <ClInclude Include="Framework\Common\portable.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\Absolute.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\AddByElement.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\CrossProduct.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\DCT.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\DivByElement.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\InverseMatrix4X4f.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\MatrixUtil.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\MulByElement.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\Normalize.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\Pow.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\Transform.h" />
-    <ClInclude Include="Framework\GeoMath\ispc\Transpose.h" />
     <ClInclude Include="Framework\GeoMath\CCMath.h" />
     <ClInclude Include="Framework\GeoMath\math\CCMathBase.h" />
     <ClInclude Include="Framework\GeoMath\math\Mat4.h" />
@@ -186,173 +164,24 @@
     <ClInclude Include="Framework\GeoMath\math\Vec3.h" />
     <ClInclude Include="Framework\GeoMath\math\Vec4.h" />
     <ClInclude Include="Framework\Interface\IApplication .h" />
-    <ClInclude Include="Framework\Common\FileUtils\ImageParser.h" />
     <ClInclude Include="Framework\Interface\IMemoryManager.h" />
     <ClInclude Include="Framework\Interface\Interface.h" />
     <ClInclude Include="Framework\Interface\IRuntimeModule.h" />
-    <ClInclude Include="Framework\Common\SceneBase\GameObject.h" />
-    <ClInclude Include="Platform\Empty\EmptyApplication.h" />
-    <ClInclude Include="Platform\Linux\XcbApplication.h" />
-    <ClInclude Include="Platform\Windows\WindowsApplication.h" />
-    <ClInclude Include="Framework\Common\SceneBase\Scene.h" />
-    <ClInclude Include="Framework\Common\SceneBase\SceneNode.h" />
-    <ClInclude Include="Framework\Common\Renderer\RendererManager.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="MaEngineDef.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Framework\Common\SceneBase\BaseObject.cpp" />
-    <ClCompile Include="Framework\Common\FileUtils\BmpParser.h" />
-    <ClCompile Include="Framework\Common\Allocator.cpp" />
-    <ClCompile Include="Framework\Common\BaseApplication.cpp" />
-    <ClCompile Include="Framework\Common\GraphicsManager.cpp" />
-    <ClCompile Include="Framework\Common\main.cpp" />
-    <ClCompile Include="Framework\Common\MemoryManager.cpp" />
-    <ClCompile Include="Framework\Common\SceneBase\GameObject.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Mat4.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Quaternion.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec2.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec3.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec4.cpp" />
-    <ClCompile Include="Platform\Empty\EmptyApplication.cpp" />
-    <ClCompile Include="Platform\Linux\helloengine_xcb.c" />
-    <ClCompile Include="Platform\Linux\XcbApplication.cpp" />
-    <ClCompile Include="Platform\Windows\helloengine_d2d.c" />
-    <ClCompile Include="Platform\Windows\helloengine_win.c" />
-    <ClCompile Include="Platform\Windows\WindowsApplication.cpp" />
-    <ClCompile Include="Framework\Common\SceneBase\Scene.cpp" />
-    <ClCompile Include="Framework\Common\Renderer\RendererManager.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="External\ispc.exe">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 "%(Filename).ispc" -o "$(IntDir)%(Filename).obj" -h "$(ProjectDir)%(Filename)_ispc.h" --target=sse4,avx2 --opt=fast-math;%(Outputs)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;$(IntDir)%(Filename)_sse4.obj;$(IntDir)%(Filename)_avx2.obj</Outputs>
-    </None>
-    <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\DivByElement.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\InverseMatrix4X4f.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\MatrixUtil.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\MulByElement.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\Normalize.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\Pow.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <None Include="Framework\GeoMath\ispc\.gitignore" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="Framework\GeoMath\ispc\DotProduct.ispc">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\External\ispc -O2 $(ProjectDir)Framework\GeoMath\ispc\%(Filename).ispc -o $(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj -h $(ProjectDir)Framework\GeoMath\ispc\%(Filename).h --opt=fast-math --arch=x86</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Framework\GeoMath\ispc\%(Filename).obj</Outputs>
-    </CustomBuild>
     <None Include="Framework\GeoMath\math\Mat4.inl" />
     <None Include="Framework\GeoMath\math\Quaternion.inl" />
     <None Include="Framework\GeoMath\math\Vec2.inl" />
     <None Include="Framework\GeoMath\math\Vec3.inl" />
     <None Include="Framework\GeoMath\math\Vec4.inl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\CrossProduct.obj" />
-    <Object Include="Framework\GeoMath\ispc\DCT.obj" />
-    <Object Include="Framework\GeoMath\ispc\DivByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\InverseMatrix4X4f.obj" />
-    <Object Include="Framework\GeoMath\ispc\MatrixUtil.obj" />
-    <Object Include="Framework\GeoMath\ispc\MulByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\Normalize.obj" />
-    <Object Include="Framework\GeoMath\ispc\Pow.obj" />
-    <Object Include="Framework\GeoMath\ispc\SubByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\Transform.obj" />
-    <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

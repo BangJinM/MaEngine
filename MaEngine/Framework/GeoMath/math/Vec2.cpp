@@ -1,5 +1,5 @@
 #include "GeoMath/math/Vec2.h"
-namespace MaEngine {
+NAMESPACEBEGINE
 	// returns true if segment A-B intersects with segment C-D. S->E is the overlap part
 	bool isOneDimensionSegmentOverlap(float A, float B, float C, float D, float *S, float * E)
 	{
@@ -295,4 +295,4 @@ namespace MaEngine {
 
 		return Vec2(0, 0);
 	}
-}
+NAMESPACEEND

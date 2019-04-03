@@ -1,5 +1,5 @@
 #include "GeoMath/math/Vec3.h"
-namespace MaEngine {
+NAMESPACEBEGINE
 	inline bool Vec3::isZero() const
 	{
 		return x == 0.0f && y == 0.0f && z == 0.0f;
@@ -160,4 +160,4 @@ namespace MaEngine {
 		result.scale(x);
 		return result;
 	}
-}
+NAMESPACEEND

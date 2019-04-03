@@ -3,7 +3,8 @@
 
 #include "GeoMath/math/Vec3.h"
 #include "GeoMath/math/Mat4.h"
-namespace MaEngine {
+#include "MaEngineDef.h"
+NAMESPACEBEGINE
 	class Mat4;
 
 	class Quaternion
@@ -100,7 +101,7 @@ namespace MaEngine {
 		static void slerpForSquad(const Quaternion& q1, const Quaternion& q2, float t, Quaternion* dst);
 	};
 
-}
+NAMESPACEEND
 #include "GeoMath/math/Quaternion.inl"
 
 #endif

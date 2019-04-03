@@ -6,9 +6,9 @@
 #define MAENGINE_IRUNTIMEMODULE_H
 
 #include "Interface.h"
-
-namespace MaEngine {
-    Interface IRuntimeModule {
+#include "MaEngineDef.h"
+NAMESPACEBEGINE
+    MaEngine_DLL Interface IRuntimeModule {
     public:
         virtual ~IRuntimeModule() {};
         /*
@@ -24,6 +24,5 @@ namespace MaEngine {
          */
         virtual void Tick() = 0;
     };
-
-}
+NAMESPACEEND
 #endif //MAENGINE_IRUNTIMEMODULE_H

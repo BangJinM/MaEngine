@@ -1,5 +1,5 @@
 #include "GeoMath/math/Vec2.h"
-namespace MaEngine {
+NAMESPACEBEGINE
 
 	inline Vec2::Vec2()
 		: x(0.0f), y(0.0f)
@@ -209,4 +209,4 @@ namespace MaEngine {
 		this->x = xx;
 		this->y = yy;
 	}
-}
+NAMESPACEEND

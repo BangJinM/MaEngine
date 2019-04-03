@@ -6,8 +6,8 @@
 #include <functional>
 #include <cmath>
 #include "GeoMath/math/CCMathBase.h"
-
-namespace MaEngine {
+#include "MaEngineDef.h"
+NAMESPACEBEGINE
 
 	inline float clampf(float value, float min_inclusive, float max_inclusive)
 	{
@@ -226,7 +226,7 @@ namespace MaEngine {
 	inline Vec2 operator*(float x, const Vec2& v);
 
 	typedef Vec2 Point;
-}
+NAMESPACEEND
 #include "GeoMath/math/Vec2.inl"
 
 #endif // MATH_VEC2_H

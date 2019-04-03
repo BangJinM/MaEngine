@@ -1,6 +1,5 @@
 #include "GeoMath/math/Vec3.h"
-namespace MaEngine {
-
+NAMESPACEBEGINE
 	Vec3::Vec3()
 		: x(0.0f), y(0.0f), z(0.0f)
 	{
@@ -190,4 +189,4 @@ namespace MaEngine {
 	const Vec3 Vec3::UNIT_X(1.0f, 0.0f, 0.0f);
 	const Vec3 Vec3::UNIT_Y(0.0f, 1.0f, 0.0f);
 	const Vec3 Vec3::UNIT_Z(0.0f, 0.0f, 1.0f);
-}
+NAMESPACEEND

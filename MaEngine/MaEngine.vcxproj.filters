@@ -45,36 +45,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform\Windows\WindowsApplication.h">
-      <Filter>Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform\Linux\XcbApplication.h">
-      <Filter>Platform\Linux</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform\Empty\EmptyApplication.h">
-      <Filter>Platform\Empty</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Allocator.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\BaseApplication.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\GfxConfiguration.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\GraphicsManager.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\MemoryManager.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\Interface\IApplication .h">
       <Filter>Framework\Interface</Filter>
     </ClInclude>
@@ -86,81 +56,6 @@
     </ClInclude>
     <ClInclude Include="Framework\Interface\IMemoryManager.h">
       <Filter>Framework\Interface</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\portable.h">
-      <Filter>Framework\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\geommath.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\Absolute.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\AddByElement.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\CrossProduct.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\DCT.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\DivByElement.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\InverseMatrix4X4f.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\MatrixUtil.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\MulByElement.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\Normalize.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\Pow.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\SubByElement.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\Transform.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\ispc\Transpose.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\AssetLoader.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Buffer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\FileUtils\Image.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\FileUtils\ImageParser.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\SceneBase\BaseObject.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\SceneBase\GameObject.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\SceneBase\Scene.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\SceneBase\SceneNode.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Config.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Renderer\BaseRenderer.h">
-      <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Mat4.h">
       <Filter>头文件</Filter>
@@ -183,65 +78,11 @@
     <ClInclude Include="Framework\GeoMath\CCMath.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Common\Renderer\RendererManager.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Renderer\RectRenderer.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\Common\Renderer\TriangleRenderer.h">
+    <ClInclude Include="MaEngineDef.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Windows\helloengine_d2d.c">
-      <Filter>Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Windows\helloengine_win.c">
-      <Filter>Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Windows\WindowsApplication.cpp">
-      <Filter>Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Linux\helloengine_xcb.c">
-      <Filter>Platform\Linux</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Linux\XcbApplication.cpp">
-      <Filter>Platform\Linux</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform\Empty\EmptyApplication.cpp">
-      <Filter>Platform\Empty</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\Allocator.cpp">
-      <Filter>Framework\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\BaseApplication.cpp">
-      <Filter>Framework\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\GraphicsManager.cpp">
-      <Filter>Framework\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\main.cpp">
-      <Filter>Framework\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\MemoryManager.cpp">
-      <Filter>Framework\Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\FileUtils\BmpParser.h">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\SceneBase\BaseObject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\SceneBase\GameObject.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Framework\Common\SceneBase\Scene.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Mat4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -257,13 +98,8 @@
     <ClCompile Include="Framework\GeoMath\math\Vec4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Common\Renderer\RendererManager.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="External\ispc.exe" />
-    <None Include="Framework\GeoMath\ispc\.gitignore" />
     <None Include="Framework\GeoMath\math\Mat4.inl">
       <Filter>头文件</Filter>
     </None>
@@ -279,35 +115,5 @@
     <None Include="Framework\GeoMath\math\Vec4.inl">
       <Filter>头文件</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="Framework\GeoMath\ispc\Transpose.obj" />
-    <Object Include="Framework\GeoMath\ispc\AddByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\CrossProduct.obj" />
-    <Object Include="Framework\GeoMath\ispc\DCT.obj" />
-    <Object Include="Framework\GeoMath\ispc\DivByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\InverseMatrix4X4f.obj" />
-    <Object Include="Framework\GeoMath\ispc\MatrixUtil.obj" />
-    <Object Include="Framework\GeoMath\ispc\MulByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\Normalize.obj" />
-    <Object Include="Framework\GeoMath\ispc\Pow.obj" />
-    <Object Include="Framework\GeoMath\ispc\SubByElement.obj" />
-    <Object Include="Framework\GeoMath\ispc\Transform.obj" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="Framework\GeoMath\ispc\AddByElement.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\CrossProduct.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\DCT.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\DivByElement.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\InverseMatrix4X4f.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\MatrixUtil.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\MulByElement.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Normalize.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Pow.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\SubByElement.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Transform.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Transpose.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\Absolute.ispc" />
-    <CustomBuild Include="Framework\GeoMath\ispc\DotProduct.ispc" />
   </ItemGroup>
 </Project>

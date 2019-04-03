@@ -2,7 +2,7 @@
 
 #include "GeoMath/math/Mat4.h"
 #include "GeoMath/math/Vec4.h"
-namespace MaEngine {
+NAMESPACEBEGINE
 
 	inline Vec4 Vec4::operator+(const Vec4& v) const
 	{
@@ -92,4 +92,4 @@ namespace MaEngine {
 		return result;
 	}
 
-}
+NAMESPACEEND

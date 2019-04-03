@@ -1,5 +1,5 @@
 #include "GeoMath/math/Mat4.h"
-namespace MaEngine {
+NAMESPACEBEGINE
 	inline Mat4 Mat4::operator+(const Mat4& mat) const
 	{
 		Mat4 result(*this);
@@ -71,4 +71,4 @@ namespace MaEngine {
 		m.transformVector(v, &x);
 		return x;
 	}
-}
+NAMESPACEEND
