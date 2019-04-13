@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaEngine", "MaEngine\MaEngine.vcxproj", "{7F46AF57-08AC-408C-AE5F-CAEC6F686A9E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaEngine-win32", "MaEngine\Platform\MaEngine-win32\MaEngine-win32.vcxproj", "{291ABA47-6E15-48BD-959B-E6352EAA7FFF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaEngine-win32", "Platform\MaEngine-win32\MaEngine-win32.vcxproj", "{291ABA47-6E15-48BD-959B-E6352EAA7FFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

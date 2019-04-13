@@ -5,7 +5,7 @@
 #include "GeoMath/math/CCMathBase.h"
 #include "MaEngineDef.h"
 NAMESPACEBEGINE
-    MaEngine_DLL class Vec3
+class MaEngine_DLL Vec3
 	{
 	public:
 		float x;

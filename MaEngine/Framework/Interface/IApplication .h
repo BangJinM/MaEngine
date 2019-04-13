@@ -9,7 +9,7 @@
 #include "IRuntimeModule.h"
 
 NAMESPACEBEGINE
-MaEngine_DLL Interface IApplication :
+ Interface MaEngine_DLL IApplication :
         implements IRuntimeModule {
 public:
     virtual int Initialize() = 0;

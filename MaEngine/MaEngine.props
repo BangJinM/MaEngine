@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="UserMacros">
+    <MaEngine>$(MSBuildThisFileDirectory)</MaEngine>
+  </PropertyGroup>
   <PropertyGroup>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ProjectDir)External;$(ProjectDir)Platform;$(ProjectDir)Framework;$(ProjectDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)MaEngine\External;$(SolutionDir)MaEngine\Platform;$(SolutionDir)MaEngine\Framework;$(SolutionDir)MaEngine\;$(IncludePath)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MaEngine)External;$(MaEngine)Platform;$(MaEngine)Framework;$(MaEngine);$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BuildMacro Include="MaEngine">
+      <Value>$(MaEngine)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
 </Project>

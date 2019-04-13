@@ -22,7 +22,7 @@ NAMESPACEBEGINE
 	/**
 	 * Defines a 2-element floating point vector.
 	 */
-	class Vec2
+	class MaEngine_DLL Vec2
 	{
 	public:
 		float x;

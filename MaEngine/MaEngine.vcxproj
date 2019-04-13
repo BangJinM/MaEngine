@@ -27,7 +27,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -76,9 +76,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)MaEngine\External;$(SolutionDir)MaEngine\Platform;$(SolutionDir)MaEngine\Framework;$(SolutionDir)MaEngine\;$(IncludePath)</IncludePath>
-    <ReferencePath>$(ProjectDir)\External;$(ReferencePath)</ReferencePath>
-    <OutDir>$(SolutionDir)$(Configuration)\..\simulator\win32</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <OutDir>$(MaEngine)..\simulator\win32\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -98,7 +98,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)MaEngine\External;$(SolutionDir)MaEngine\Platform;$(SolutionDir)MaEngine\Framework;$(SolutionDir)MaEngine\;$(IncludePath)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -156,6 +156,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Common\BaseApplication.h" />
+    <ClInclude Include="Framework\Common\GfxConfiguration.h" />
     <ClInclude Include="Framework\GeoMath\CCMath.h" />
     <ClInclude Include="Framework\GeoMath\math\CCMathBase.h" />
     <ClInclude Include="Framework\GeoMath\math\Mat4.h" />
@@ -167,14 +169,17 @@
     <ClInclude Include="Framework\Interface\IMemoryManager.h" />
     <ClInclude Include="Framework\Interface\Interface.h" />
     <ClInclude Include="Framework\Interface\IRuntimeModule.h" />
+    <ClInclude Include="Framework\Platform\Windows\WindowsApplication.h" />
     <ClInclude Include="MaEngineDef.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Common\BaseApplication.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Mat4.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Quaternion.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec2.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec3.cpp" />
     <ClCompile Include="Framework\GeoMath\math\Vec4.cpp" />
+    <ClCompile Include="Framework\Platform\Windows\WindowsApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Framework\GeoMath\math\Mat4.inl" />

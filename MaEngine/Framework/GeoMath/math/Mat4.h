@@ -8,7 +8,7 @@
 #include "MaEngineDef.h"
 NAMESPACEBEGINE
 class  Quaternion;
-MaEngine_DLL class Mat4
+class MaEngine_DLL Mat4
 {
 public:
 

@@ -1,4 +1,3 @@
-#pragma once
 #define NAMESPACEBEGINE namespace MaEngine{
 #define NAMESPACEEND	}
 #define USINGNAMESPACE	using namespace MaEngine

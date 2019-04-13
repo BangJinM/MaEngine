@@ -7,7 +7,7 @@
 NAMESPACEBEGINE
 	class Mat4;
 
-	class Quaternion
+class MaEngine_DLL Quaternion
 	{
 		friend class Curve;
 		friend class Transform;

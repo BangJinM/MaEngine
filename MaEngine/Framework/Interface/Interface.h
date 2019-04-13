@@ -4,6 +4,7 @@
 
 #ifndef MAENGINE_INTERFACE_H
 #define MAENGINE_INTERFACE_H
+#include "MaEngineDef.h"
 
 #define Interface class
 

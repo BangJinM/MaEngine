@@ -6,9 +6,9 @@
 #define MAENGINE_IRUNTIMEMODULE_H
 
 #include "Interface.h"
-#include "MaEngineDef.h"
+
 NAMESPACEBEGINE
-    MaEngine_DLL Interface IRuntimeModule {
+     Interface MaEngine_DLL IRuntimeModule {
     public:
         virtual ~IRuntimeModule() {};
         /*

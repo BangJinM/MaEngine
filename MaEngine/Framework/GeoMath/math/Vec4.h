@@ -12,7 +12,7 @@
 NAMESPACEBEGINE
 
 class Mat4;
-MaEngine_DLL class Vec4
+class MaEngine_DLL Vec4
 {
 public:
 #ifdef __SSE__

@@ -1,32 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Framework">
       <UniqueIdentifier>{185808e5-39ce-47e7-8595-a7858765bf3d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{72d43e40-189f-45ae-b8ce-42a16248df15}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Platform\Empty">
-      <UniqueIdentifier>{48c4ea79-132f-42c4-a929-ef5708a54d2e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{1bfc3786-0c17-49cc-b4bd-5817a6238e59}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Platform\Linux">
-      <UniqueIdentifier>{443563cd-4c70-4ff0-bd00-a7eb1df3ab80}</UniqueIdentifier>
     </Filter>
     <Filter Include="Framework\Common">
       <UniqueIdentifier>{eafd254c-9107-497a-a047-468942a23a84}</UniqueIdentifier>
@@ -40,8 +22,11 @@
     <Filter Include="External">
       <UniqueIdentifier>{47a31ae8-8494-47cc-8fcc-6bb49bf9ebba}</UniqueIdentifier>
     </Filter>
-    <Filter Include="RHI">
-      <UniqueIdentifier>{29e6838c-8d2c-4fae-9278-ae408a16a7e5}</UniqueIdentifier>
+    <Filter Include="Framework\GeoMath">
+      <UniqueIdentifier>{370d8fe1-8f8a-4165-a78d-c2773d74d65e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\GeoMath\math">
+      <UniqueIdentifier>{dfd147a0-bae4-4192-bc78-7382da4360fa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,63 +42,76 @@
     <ClInclude Include="Framework\Interface\IMemoryManager.h">
       <Filter>Framework\Interface</Filter>
     </ClInclude>
+    <ClInclude Include="Framework\GeoMath\CCMath.h">
+      <Filter>Framework\GeoMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\GfxConfiguration.h">
+      <Filter>Framework\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Common\BaseApplication.h">
+      <Filter>Framework\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MaEngineDef.h" />
+    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h">
+      <Filter>Framework\GeoMath\math</Filter>
+    </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Mat4.h">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Quaternion.h">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Vec2.h">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Vec3.h">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClInclude>
     <ClInclude Include="Framework\GeoMath\math\Vec4.h">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\GeoMath\math\CCMathBase.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Framework\GeoMath\CCMath.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MaEngineDef.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="Framework\Platform\Windows\WindowsApplication.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\GeoMath\math\Mat4.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Quaternion.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Vec2.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Vec3.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </ClCompile>
     <ClCompile Include="Framework\GeoMath\math\Vec4.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Common\BaseApplication.cpp">
+      <Filter>Framework\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Platform\Windows\WindowsApplication.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Framework\GeoMath\math\Mat4.inl">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </None>
     <None Include="Framework\GeoMath\math\Quaternion.inl">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </None>
     <None Include="Framework\GeoMath\math\Vec2.inl">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </None>
     <None Include="Framework\GeoMath\math\Vec3.inl">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </None>
     <None Include="Framework\GeoMath\math\Vec4.inl">
-      <Filter>头文件</Filter>
+      <Filter>Framework\GeoMath\math</Filter>
     </None>
   </ItemGroup>
 </Project>

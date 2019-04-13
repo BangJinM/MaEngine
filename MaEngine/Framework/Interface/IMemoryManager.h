@@ -5,7 +5,7 @@
 
 
 NAMESPACEBEGINE
-MaEngine_DLL Interface IMemoryManager : implements IRuntimeModule
+Interface MaEngine_DLL IMemoryManager : implements IRuntimeModule
 {
 public:
 	virtual int Initialize() = 0;
